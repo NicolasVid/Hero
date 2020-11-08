@@ -21,7 +21,12 @@ Stack technique
 * Back - NodeJS / Express (Postgres, sqitch, bcrypt,)
 * Déploiement - AWS
 
-Lien 
+Lien du site
 ----------
 
 http://34.207.247.234:5000/
+
+Lien de la présentation Youtube
+----------
+
+https://youtu.be/yRnSeJcDcPs?t=2751
