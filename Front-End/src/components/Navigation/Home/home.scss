@@ -1,0 +1,130 @@
+@use 'src/styles/vars' as vars;
+
+.Home{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem;
+
+  img {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+  }
+
+  p {
+    text-align: left;
+    padding: 5px 0px;
+    color: vars.$font-base-color;
+    font-size: 0.7rem;
+    width: 450px;
+    letter-spacing: .1rem;
+
+  }
+
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: left;
+    padding: 0.5rem 2rem 0.8rem 0.5rem;
+    color: vars.$font-gold-color;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    border-bottom: 1px vars.$font-gold-color solid;
+    width: 450px;
+  }
+
+  &__content {
+    background-color: vars.$brown-color;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+  
+    border: 10px outset vars.$border-color;
+    border-radius: 12px;
+  
+    box-shadow: 0px 10px 13px -7px #000000,
+    inset 4px 2px 50px -1px rgba(0,0,0,0.62); 
+    z-index: 5;
+  }
+
+  
+  &__title {
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    text-shadow: 3px 2px 0 #290f0f;
+    color: vars.$font-gold-color;
+    text-align: center;
+
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: vars.$border-color 1px solid;
+
+    background-color: vars.$brown-color;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+  
+    border: 5px outset vars.$border-color;
+    border-radius: 12px;
+  
+    box-shadow: 0px 10px 13px -7px #000000,
+    inset 4px 2px 50px -1px rgba(0,0,0,0.31); 
+  }
+
+  &__description {
+    letter-spacing: .1rem;
+    margin-bottom: 30px;
+    color: vars.$font-gold-color;
+  }
+  
+  &__button {
+    width: auto;
+    height: auto;
+    margin-top: 3rem;
+    letter-spacing: .2rem;
+    font-family: Merriweather;
+  
+    color: vars.$font-btn-grad-color;
+    transition: all 0.4s;
+    cursor: pointer;
+    background: linear-gradient(
+    180deg,
+    vars.$bgr-btn-grad-01 0%,
+    vars.$bgr-btn-grad-02 49%,
+    vars.$bgr-btn-grad-03 51%,
+    vars.$bgr-btn-grad-04 100%);
+  
+    padding: 10px 20px 10px 20px;
+    
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  
+    border: 5px outset vars.$font-gold-color;
+    border-radius: 12px;
+  }
+  &__button:hover {
+    color: vars.$font-btn-grad-color-hover;
+    background: linear-gradient(
+      180deg,
+      vars.$bgr-btn-grad-hover-01 0%,
+      vars.$bgr-btn-grad-hover-02 46.65551839464883%,
+      vars.$bgr-btn-grad-hover-03 46.65551839464883%,
+      vars.$bgr-btn-grad-hover-04  100%);
+
+      transform: translateY(-2px);
+  }
+}

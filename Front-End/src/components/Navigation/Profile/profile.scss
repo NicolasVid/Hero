@@ -1,0 +1,234 @@
+@use "src/styles/vars";
+
+.profile {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: vars.$bgr-color-black;
+  margin: 6rem;
+  &__container{
+    width: 33rem;
+    background-color: vars.$brown-color;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem 0.7rem 0.7rem 0.7rem;
+    border: 0.6rem outset vars.$border-color;
+    border-radius: 12px;
+    box-shadow: 0px 10px 13px -7px #000000,
+    inset 4px 2px 50px -1px rgba(0,0,0,0.62); 
+    position: absolute;
+    align-items: center;
+    letter-spacing: .1rem;
+    line-height: 1.2rem;
+  }&__field{
+    padding: 0.3rem 0rem;
+    background: vars.$font-base-color;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+    border: 5px outset vars.$font-gold-color;
+    border-radius: 15px;
+    text-align: center;
+    width: 21rem;
+    font-size: 0.9rem;
+    letter-spacing: .1rem;
+  }&__btn {
+    letter-spacing: .2rem;
+    width: 21rem;
+    font-family: Merriweather;
+    height: 2.5rem;
+    color: vars.$font-btn-grad-color;
+    transition: all 0.4s;
+    cursor: pointer;
+    background: linear-gradient(
+    180deg,
+    vars.$bgr-btn-grad-01 0%,
+    vars.$bgr-btn-grad-02 49%,
+    vars.$bgr-btn-grad-03 51%,
+    vars.$bgr-btn-grad-04 100%);
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: 5px outset vars.$font-gold-color;
+    border-radius: 12px;
+  }
+  &__btn:hover {
+    transform: translateY(-2px);
+    color: vars.$font-btn-grad-color-hover;
+    background: linear-gradient(
+      180deg,
+      vars.$bgr-btn-grad-hover-01 0%,
+      vars.$bgr-btn-grad-hover-02 46.65551839464883%,
+      vars.$bgr-btn-grad-hover-03 46.65551839464883%,
+      vars.$bgr-btn-grad-hover-04  100%);
+  }
+  &__deleteBtn {
+    letter-spacing: .2rem;
+    width: 21rem;
+    height: 3.7rem;
+    margin: 1rem auto;
+    font-family: Merriweather;
+    color: red;
+    transition: all 0.4s;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(
+    180deg,
+    vars.$bgr-btn-grad-01 0%,
+    vars.$bgr-btn-grad-02 49%,
+    vars.$bgr-btn-grad-03 51%,
+    vars.$bgr-btn-grad-04 100%);
+    font-weight: bold;
+    text-align: center;
+    border: 5px outset vars.$font-gold-color;
+    border-radius: 12px;
+  }&__deleteBtn:hover {
+    transform: translateY(-2px);
+    color: vars.$font-btn-grad-color-hover;
+    background: linear-gradient(
+      180deg,
+      vars.$bgr-btn-grad-hover-01 0%,
+      vars.$bgr-btn-grad-hover-02 46.65551839464883%,
+      vars.$bgr-btn-grad-hover-03 46.65551839464883%,
+      vars.$bgr-btn-grad-hover-04  100%);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 3px 2px 0 #290f0f;
+    color: vars.$font-gold-color;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: vars.$border-color 1px solid;;
+  }
+// container du contenu 
+    &__input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.7rem;
+      width: 60%;
+
+        h2 {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          padding-bottom:0.3rem ;
+          font-weight: bold;
+          border-bottom: 1px solid vars.$border-color;
+          font-size: 1.1rem;
+          color: vars.$font-base-color;
+        }
+        h3{
+          margin-bottom: 0.8rem;
+          font-weight: bold;
+          font-size: 0.8rem;
+          color: vars.$font-silver-color;
+        }
+    }
+
+// on traite le css de la modal
+
+  &__delete-modal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5F5942;
+    left: 4rem;
+    right: 4rem;
+    margin: auto;
+    top: 0;
+    width: 100%;
+    left: 0;
+    padding: 2.5rem;
+    border-radius: 10px;
+    height: 100%;
+    padding-top: 8rem;
+  }&__delete-btn {
+    letter-spacing: .2rem;
+      color: vars.$invalide-color;
+    font-family: Merriweather;
+      width: 20rem;
+      height: 4rem;
+      transition: all 0.4s;
+      cursor: pointer;
+      background: linear-gradient(
+      180deg,
+      vars.$bgr-btn-grad-01 0%,
+      vars.$bgr-btn-grad-02 49%,
+      vars.$bgr-btn-grad-03 51%,
+      vars.$bgr-btn-grad-04 100%);
+      padding: 0.1rem 0rem;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      border: 5px outset vars.$font-gold-color;
+      border-radius: 12px;
+    }&__delete-btn:hover {
+      transform: translateY(-2px);
+      color: vars.$font-btn-grad-color-hover;
+      background: linear-gradient(
+        180deg,
+        vars.$bgr-btn-grad-hover-01 0%,
+        vars.$bgr-btn-grad-hover-02 46.65551839464883%,
+        vars.$bgr-btn-grad-hover-03 46.65551839464883%,
+        vars.$bgr-btn-grad-hover-04  100%);
+    }
+    &__delete-back {
+      font-family: merriweather;
+      letter-spacing: .2rem;
+      width: 20rem;
+      height: 4rem;
+      margin: auto;
+      color: vars.$font-btn-grad-color;
+      transition: all 0.4s;
+      cursor: pointer;
+      background: linear-gradient(
+      180deg,
+      vars.$bgr-btn-grad-01 0%,
+      vars.$bgr-btn-grad-02 49%,
+      vars.$bgr-btn-grad-03 51%,
+      vars.$bgr-btn-grad-04 100%);
+      padding: 0.1rem 0rem;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      border: 5px outset vars.$font-gold-color;
+      border-radius: 12px;
+    }
+    &__delete-back:hover {
+      transform: translateY(-2px);
+      color: vars.$font-btn-grad-color-hover;
+      background: linear-gradient(
+        180deg,
+        vars.$bgr-btn-grad-hover-01 0%,
+        vars.$bgr-btn-grad-hover-02 46.65551839464883%,
+        vars.$bgr-btn-grad-hover-03 46.65551839464883%,
+        vars.$bgr-btn-grad-hover-04  100%);
+    }
+    &__delete-modal--hide {
+      display: none;
+    }
+    &__confirmation {
+      position: absolute;
+      bottom: 4rem;
+      right: 1rem;
+      background-color: vars.$valide-color;
+      padding: 1.5rem;
+      border-radius: 5px;
+  
+      &--hiden {
+        display: none;
+      }
+  }
+}

@@ -1,0 +1,36 @@
+@use 'src/styles/vars' as vars;
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: vars.$font-contrast-color;
+  width: 100%;
+  z-index: 999;
+  letter-spacing: .1rem;
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+.footer li {
+  color: vars.$font-gold-color;
+  text-align: center;
+  padding: 1rem;
+  margin: 0 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
+
+  
+}
+
+.footer li:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+  color: vars.$font-silver-color;
+}

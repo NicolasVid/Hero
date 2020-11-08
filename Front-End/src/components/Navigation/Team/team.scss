@@ -1,0 +1,92 @@
+@use 'src/styles/vars' as vars;
+
+.team{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: vars.$bgr-color-black;
+  margin-top: 3rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.member{
+&__section{
+  padding: 4rem 0rem 2rem 0;
+}&__container{
+  margin: 0.1rem;
+  display: flex;
+  flex-direction: row;
+}&__wrapper{
+  width: 19rem;
+  margin: 2rem;
+  margin-top: 1.9rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}&__card{
+  height: 700px;
+  box-shadow: 0px 10px 13px -7px #000000,
+  inset 4px 2px 50px -1px rgba(0,0,0,0.62); 
+  border-radius: 9px 6px 0 0;
+  background-color: vars.$brown-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.6rem outset vars.$border-color;
+  border-radius: 12px;
+  // https://html-css-js.com/css/generator/box-shadow/
+  box-shadow: 8px 8px 10px 3px rgba(0,0,0,0.26)
+}&__imgBgr{
+  width: 18.7rem;
+  height: auto;
+  object-fit: cover;
+  // https://bennettfeely.com/clippy/
+  clip-path: polygon(0 1%, 100% 0, 100% 71%, 0% 100%);
+  border-radius: 8px 5px 0 0;
+}&__imgProfile{
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 2;
+  background-color: vars.$bgr-color-black;
+  width: 10rem;
+  height: 10rem;
+  margin-top: -5rem;
+  border: 0.5rem solid vars.$border-color;
+}h1{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: vars.$font-gold-color;
+  margin: 1.5rem 0;
+  height: 80px;
+  letter-spacing: .2rem;
+  text-shadow: 3px 2px 0 #290f0f;
+}&__job{
+  color: vars.$font-base-color;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 1rem;
+  height: 80px;
+  letter-spacing: .2rem;
+  line-height: 1.8rem;
+}&__about{
+  font-size: 1.5rem;
+  margin: .9rem 0;
+  font-style: italic;
+  text-align: center;
+  color: vars.$font-silver-color;
+  letter-spacing: .2rem;
+}&__social{
+  width: 80%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  margin-top: 1.5rem;
+  border-top: 1px solid vars.$border-color;
+  font-size: 2.2rem;
+}&__social-icon:hover{
+  transform: translateY(-2px); 
+}
+}
